@@ -1,15 +1,30 @@
-.cursor {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: black;
-  position: absolute;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: background-color 0.2s, transform 0.2s;
+* {
+  -webkit-font-smoothing: none;
 }
+header {
+  .scaled {
+    transform: scale(1.6) translate(-50%, -50%);
+    background-color: black;
+  }
 
-.cursor:hover {
-  background-color: red;
-  transform: translate(-50%, -50%) scale(1.2);
+  .list-item {
+    width: fit-content;
+    height: 30px;
+    display: flex;
+    color: grey;
+    align-items: center;
+  }
+
+  .scaled-item {
+    position: relative;
+    z-index: 1;
+    font-weight: normal; /* Set font weight to normal for scaled-item */
+  }
+
+  .scaled-item:hover {
+    mix-blend-mode: difference; /* Apply blend mode only on hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.1);
+    transition: 0.7s;
+  }
 }
