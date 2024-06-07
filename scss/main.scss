@@ -1,18 +1,4 @@
 @import "reset";
 @import "header";
 @import "hero";
-.cursor {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #2f82ed;
-  position: absolute;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: background-color 0.2s, transform 0.2s;
-}
-.hero-cursor {
-  background-color: orange;
-  width: 15px;
-  height: 15px;
-}
+@import "cursor";

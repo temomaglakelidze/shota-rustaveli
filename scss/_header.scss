@@ -2,8 +2,9 @@
   -webkit-font-smoothing: none;
 }
 header {
+  background-color: orange;
   .scaled {
-    transform: scale(1.6) translate(-50%, -50%);
+    transform: scale(2.9) translate(-50%, -50%);
     background-color: black;
   }
 
@@ -11,13 +12,13 @@ header {
     width: fit-content;
     height: 30px;
     display: flex;
-    color: grey;
+    color: white;
     align-items: center;
   }
 
   .scaled-item {
     position: relative;
-    z-index: 1;
+    z-index: 999;
     font-weight: normal; /* Set font weight to normal for scaled-item */
   }
 
@@ -25,6 +26,6 @@ header {
     mix-blend-mode: difference; /* Apply blend mode only on hover */
     color: white; /* Change text color on hover */
     transform: scale(1.1);
-    transition: 0.7s;
+    transition: 0.5s;
   }
 }
