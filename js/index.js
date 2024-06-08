@@ -1,35 +1,31 @@
 const cursor = document.querySelector(".cursor");
-const listItems = document.querySelectorAll(".nav-bar ul li"); // Corrected selector
 const navBar = document.querySelector(".nav-bar");
-const searchContetnt = document.querySelector(".search-content");
+const searchContent = document.querySelector(".search-content");
+const navBarLink = document.querySelectorAll(".nav-bar ul li");
 
 document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.pageX + "px";
   cursor.style.top = e.pageY + "px";
 });
-
-listItems.forEach((item) => {
-  item.addEventListener("mouseover", () => {
-    // Changed to item instead of navBar
+navBar.addEventListener("mouseover", () => {
+  cursor.classList.add("navbar-cursor");
+});
+navBar.addEventListener("mouseout", () => {
+  cursor.classList.remove("navbar-cursor");
+});
+navBarLink.forEach((navBarLink) => {
+  navBarLink.addEventListener("mouseover", () => {
     cursor.classList.add("link-cursor");
   });
 
-  navBar.addEventListener("mouseover", () => {
-    cursor.classList.add("navbar-cursor");
-  });
-
-  navBar.addEventListener("mouseout", () => {
-    cursor.classList.remove("navbar-cursor");
-  });
-
-  item.addEventListener("mouseout", () => {
-    // Changed to item instead of navBar
+  navBarLink.addEventListener("mouseout", () => {
     cursor.classList.remove("link-cursor");
   });
 });
-searchContetnt.addEventListener("mouseover", () => {
+
+searchContent.addEventListener("mouseover", () => {
   cursor.classList.add("search-cursor");
 });
-searchContetnt.addEventListener("mouseout", () => {
+searchContent.addEventListener("mouseout", () => {
   cursor.classList.remove("search-cursor");
 });

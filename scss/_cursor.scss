@@ -8,15 +8,18 @@
   transform: translate(-50%, -50%);
   transition: background-color 0.2s, transform 0.2s;
   z-index: 900;
+  transform-origin: center;
 }
 .navbar-cursor {
   background-color: #7faafa;
   width: 15px;
   height: 15px;
+  transform: scale(1.6);
 }
 .link-cursor {
   background-color: white;
 }
 .search-cursor {
   background-color: #7faafa;
+  transform: scale(1.6);
 }
