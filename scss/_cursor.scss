@@ -2,15 +2,18 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #2f82ed;
+  background-color: white;
   position: absolute;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: background-color 0.2s, transform 0.2s;
   z-index: 900;
 }
-.hero-cursor {
-  background-color: orange;
+.navbar-cursor {
+  background-color: #7faafa;
   width: 15px;
   height: 15px;
+}
+.link-cursor {
+  background-color: white;
 }

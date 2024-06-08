@@ -1,4 +1,9 @@
 @import "reset";
-@import "header";
-@import "hero";
 @import "cursor";
+@import "navbar";
+body {
+  background-color: #7faafa;
+}
+.main-content {
+  background-color: wheat;
+}

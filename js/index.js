@@ -1,7 +1,6 @@
 const cursor = document.querySelector(".cursor");
-const listItems = document.querySelectorAll(".list-item");
-const element = document.querySelector(".cursor");
-const hero = document.querySelector(".hero");
+const listItems = document.querySelectorAll(".nav-bar ul li"); // Corrected selector
+const navBar = document.querySelector(".nav-bar");
 
 document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.pageX + "px";
@@ -10,20 +9,19 @@ document.addEventListener("mousemove", (e) => {
 
 listItems.forEach((item) => {
   item.addEventListener("mouseover", () => {
-    element.classList.add("scaled");
-    item.classList.add("scaled-item");
+    // Changed to item instead of navBar
+    cursor.classList.add("link-cursor");
+  });
+  navBar.addEventListener("mouseover", () => {
+    cursor.classList.add("navbar-cursor");
+  });
+
+  navBar.addEventListener("mouseout", () => {
+    cursor.classList.remove("navbar-cursor");
   });
 
   item.addEventListener("mouseout", () => {
-    element.classList.remove("scaled");
-    item.classList.remove("scaled-item");
+    // Changed to item instead of navBar
+    cursor.classList.remove("link-cursor");
   });
-});
-
-hero.addEventListener("mouseover", () => {
-  cursor.classList.add("hero-cursor");
-});
-
-hero.addEventListener("mouseout", () => {
-  cursor.classList.remove("hero-cursor");
 });
