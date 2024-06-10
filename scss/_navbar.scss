@@ -4,7 +4,7 @@
   background-color: white;
   height: 92vh;
   border-radius: 20px;
-
+  padding: 16px 16px 100px 16px;
   .nav-list {
     gap: 30px;
     h1 {
@@ -47,15 +47,13 @@
     }
   }
   .nav-footer {
+    align-items: center;
+    justify-content: center;
     ul {
-      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 10px;
       li {
-        padding: 10px;
-        border-radius: 10px;
-        transform: scale(1);
         a {
           color: black;
           margin-left: 10px;
@@ -65,14 +63,71 @@
           font-style: normal;
           font-variation-settings: "wdth" 100;
         }
-        &:hover {
-          background-color: #3381ff;
-          transform: scale(1.05);
-          transition: 0.2s;
+      }
+    }
+    .soc-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      li {
+        a {
+          width: 50px;
+          height: 50px;
+          background-color: black;
+          text-align: center;
+          line-height: 30px;
+          font-size: 30px;
+          margin: 0 10px;
+          display: block;
+          border-radius: 50%;
+          position: relative;
+          overflow: hidden;
+          border: 3px solid black;
+          z-index: 1;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          i {
+            position: absolute;
+            color: #fff;
+            transition: 0.5s;
+            z-index: 3;
+          }
+          &:hover i {
+            transform: rotateY(360deg);
+          }
         }
-        &:hover a {
-          color: white;
-          transition: 0.2s;
+        &:nth-child(1)::before {
+          content: "";
+          width: 50px;
+          height: 50px;
+          background-color: #3b5999;
+          z-index: 2;
+          position: absolute;
+        }
+        &:nth-child(2)::before {
+          content: "";
+          width: 50px;
+          height: 50px;
+          background: linear-gradient(
+            45deg,
+            #405de6,
+            #5851db,
+            #833ab4,
+            #c13584,
+            #e1306c,
+            #fd1d1d,
+            #f56040,
+            #f77737,
+            #fcaf45,
+            #ffdc80
+          );
+          background-size: 200% 200%;
+          animation: gradientAnimation 10s ease infinite;
+          z-index: 2;
+          position: absolute;
         }
       }
     }
