@@ -10,24 +10,15 @@
   z-index: 999;
   transform-origin: center;
 }
-.navbar-cursor {
+.blue-cursor {
   background-color: #7faafa;
-  width: 15px;
-  height: 15px;
-  transform: scale(1.6);
 }
-.link-cursor {
+.white-cursor {
   background-color: white;
 }
 .search-cursor {
   background-color: #7faafa;
-  transform: scale(1.6);
 }
-@media only screen and (max-width: 1400px) {
-  .navbar-cursor {
-    transform: scale(1.2);
-  }
-  .search-cursor {
-    transform: scale(1.2);
-  }
+.soc-link-cursor {
+  background-color: #7faafa;
 }
