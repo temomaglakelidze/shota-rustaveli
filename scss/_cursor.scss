@@ -7,7 +7,7 @@
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: background-color 0.2s, transform 0.2s;
-  z-index: 900;
+  z-index: 999;
   transform-origin: center;
 }
 .navbar-cursor {
@@ -22,4 +22,12 @@
 .search-cursor {
   background-color: #7faafa;
   transform: scale(1.6);
+}
+@media only screen and (max-width: 1400px) {
+  .navbar-cursor {
+    transform: scale(1.2);
+  }
+  .search-cursor {
+    transform: scale(1.2);
+  }
 }

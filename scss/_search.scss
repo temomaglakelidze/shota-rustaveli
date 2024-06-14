@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
 .search-content {
   background-color: white;
-  height: 80px;
+  height: 60px;
   width: 100%;
   border-radius: 20px;
-  padding: 20px;
+  padding: 15px;
+  transform: translateY(0);
+  animation: search-animation 1s;
+  @keyframes search-animation {
+    from {
+      transform: translateY(-150%);
+    }
+  }
   .search-box {
     width: 30%;
     height: 100%;
@@ -29,6 +37,11 @@
       display: flex;
       .log-in {
         padding: 10px 10px 10px 10px;
+        font-family: "Noto Sans Georgian", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
         &:hover {
           border-radius: 10px 0 0 10px;
           background-color: #3381ff;
@@ -38,11 +51,54 @@
       }
       .sign-in {
         padding: 10px 10px 10px 10px;
+        font-family: "Noto Sans Georgian", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
         &:hover {
           border-radius: 0 10px 10px 0;
           background-color: #3381ff;
 
           color: white;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .search-content {
+    height: 60px;
+    padding: 15px;
+    .log-in-content {
+      .log-btn {
+        .log-in {
+          padding: 10px 10px 10px 10px;
+          font-family: "Noto Sans Georgian", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          font-style: normal;
+          font-variation-settings: "wdth" 100;
+          &:hover {
+            border-radius: 10px 0 0 10px;
+            background-color: #3381ff;
+
+            color: white;
+          }
+        }
+        .sign-in {
+          padding: 10px 10px 10px 10px;
+          font-family: "Noto Sans Georgian", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          font-style: normal;
+          font-variation-settings: "wdth" 100;
+          &:hover {
+            border-radius: 0 10px 10px 0;
+            background-color: #3381ff;
+
+            color: white;
+          }
         }
       }
     }

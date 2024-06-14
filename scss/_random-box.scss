@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@700&display=swap");
+.random-box {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #e1f9fc;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px 0 30px;
+  align-items: center;
+  img {
+    height: 200px;
+    transform: scale(1.3);
+  }
+  .random-box-text {
+    height: 100%;
+    h1 {
+      font-family: "Noto Sans Georgian", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+      line-height: normal;
+      margin-top: 30px;
+      text-align: start;
+      color: black;
+    }
+  }
+}

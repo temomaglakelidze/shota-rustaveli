@@ -21,8 +21,12 @@
   </head>
   <body class="d-flex justify-content-center">
     <div class="cursor"></div>
-    <main class="d-flex row container-fluid justify-content-center mt-5 gap-3">
-      <div class="nav-bar col-2 d-flex justify-content-between flex-column">
+    <main
+      class="d-flex row container-fluid justify-content-center mt-3 gap-3 col-12"
+    >
+      <div
+        class="nav-bar col-xxl-2 col-2 justify-content-between flex-column d-xl-flex d-none"
+      >
         <div class="nav-list d-flex flex-column">
           <h1>some logo</h1>
           <ul>
@@ -46,27 +50,92 @@
               <i class="fa-regular fa-newspaper"></i
               ><a href="#" class="list-item">სიახლეები</a>
             </li>
-            <li><a href="#">ჩვენ შესახებ</a></li>
-            <li><a href="#">კონტაქტი</a></li>
-            <li><a href="#">მხარდაჭერა</a></li>
+            <li>
+              <i class="fa-solid fa-circle-info"></i
+              ><a href="#">ჩვენ შესახებ</a>
+            </li>
+            <li><i class="fa-solid fa-tty"></i><a href="#">კონტაქტი</a></li>
+            <li>
+              <i class="fa-solid fa-headset"></i><a href="#">მხარდაჭერა</a>
+            </li>
           </ul>
         </div>
         <div class="nav-footer">
           <ul class="soc-links">
             <li>
-              <a href="#"><i class="fa-brands fa-facebook-f fa-sm"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f fa-2xs"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fa-brands fa-instagram fa-sm"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram fa-2xs"></i></a>
             </li>
             <li>
-              <a href="#"> <i class="fa-brands fa-youtube fa-sm"></i></a>
+              <a href="#"> <i class="fa-brands fa-youtube fa-2xs"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-tiktok fa-2xs"></i></a>
             </li>
           </ul>
           <div class="nav-footer-copyright"></div>
         </div>
       </div>
-      <div class="main-content col-9 d-flex flex-column">
+      <div class="hidden-navbar">
+        <button class="hidden-navbar-arrow">
+          <i class="fa-solid fa-angle-right fa-2xl" style="color: #000000"></i>
+        </button>
+        <div class="nav-list d-flex flex-column">
+          <h1>some logo</h1>
+          <ul>
+            <li>
+              <i class="fa-solid fa-house"></i>
+              <a href="#" class="list-item">მთავარი</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-graduation-cap"></i
+              ><a href="#" class="list-item">სტუდენტი</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-chalkboard-user"></i
+              ><a href="#" class="list-item">მოსწავლე</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-award"></i
+              ><a href="#" class="list-item">მასწავლებელი</a>
+            </li>
+            <li>
+              <i class="fa-regular fa-newspaper"></i
+              ><a href="#" class="list-item">სიახლეები</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-info"></i
+              ><a href="#">ჩვენ შესახებ</a>
+            </li>
+            <li><i class="fa-solid fa-tty"></i><a href="#">კონტაქტი</a></li>
+            <li>
+              <i class="fa-solid fa-headset"></i><a href="#">მხარდაჭერა</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-footer">
+          <ul class="soc-links">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook-f fa-2xs"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram fa-2xs"></i></a>
+            </li>
+            <li>
+              <a href="#"> <i class="fa-brands fa-youtube fa-2xs"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-tiktok fa-2xs"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+      <div
+        class="main-content col-xxl-9 col-xl-9 col-12 d-flex flex-column gap-3"
+      >
         <div class="search-content d-flex justify-content-between">
           <div class="search-box d-flex align-items-center gap-1">
             <i class="fa-solid fa-magnifying-glass" style="color: #99a0a3"></i>
@@ -76,9 +145,15 @@
             <i class="fa-solid fa-bell" style="color: #99a0a3"></i>
             <div class="log-btn">
               <div class="log-in">შესვლა</div>
-              <div class="sign-in">დარეგისტრირება</div>
+              <div class="sign-in">რეგისტრაცია</div>
             </div>
           </div>
+        </div>
+        <div class="random-box">
+          <div class="random-box-text">
+            <h1>შექმენი შენი საკუთარი ბიბლიოთეკა "ჩვენი" დახმარებით</h1>
+          </div>
+          <img src="images/desk-ilustration.png" alt="student desk" />
         </div>
       </div>
     </main>
