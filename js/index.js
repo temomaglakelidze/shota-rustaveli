@@ -5,6 +5,7 @@ const navSoc = document.querySelector(".nav-bar .nav-footer .soc-links li");
 const socLinks = document.querySelectorAll(
   ".nav-bar .nav-footer .soc-links li a"
 );
+
 const mainBox = document.querySelector(".main-box");
 document.addEventListener("DOMContentLoaded", function () {
   const menuBar = document.querySelector(".hidden-navbar");

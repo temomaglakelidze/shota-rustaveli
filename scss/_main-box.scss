@@ -18,7 +18,8 @@
     flex-direction: column;
     justify-content: space-between;
     h1 {
-      width: 600px;
+      max-width: 600px;
+      width: 100%;
       font-family: "Noto Sans Georgian", sans-serif;
       font-size: 32px;
       font-weight: 700;

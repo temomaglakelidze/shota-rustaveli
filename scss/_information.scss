@@ -1,8 +1,45 @@
 .information-content {
+  @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
   width: 100%;
   height: 200px;
   .information-card {
     background-color: white;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 200px;
+      position: relative;
+      height: 200px;
+      top: 100px;
+      left: 100px;
+    }
+    .books-img,
+    .typewriter {
+      top: 40px;
+    }
+
+    .information-numb {
+      animation: counter 5s infinite alternate ease-in-out;
+      font: 800 40px system-ui;
+      padding: 2rem;
+    }
+    div::after {
+      content: counter(num);
+    }
+    @keyframes counter {
+      from {
+        --num: 0;
+      }
+      to {
+        --num: 100;
+      }
+    }
   }
 }
