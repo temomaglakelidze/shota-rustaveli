@@ -528,3 +528,10 @@
     }
   }
 }
+@media only screen and (max-width: 796px) {
+  .main-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
