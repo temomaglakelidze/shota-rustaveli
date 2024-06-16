@@ -1,13 +1,26 @@
 @import "reset";
 @import "cursor";
 @import "navbar";
-@import "hero";
 @import "search";
 @import "hidden-navbar";
 @import "main-box";
 @import "information";
+
 body {
   background-color: #7faafa;
+  overflow-x: hidden;
+  position: relative;
+  .happy-robot {
+    position: fixed;
+    width: 200px;
+    right: -50px;
+    animation: happy-robot-appear 0.5s;
+    @keyframes happy-robot-appear {
+      from {
+        transform: translateX(100px);
+      }
+    }
+  }
 }
 .overlay {
   position: fixed;
@@ -22,5 +35,8 @@ body {
   display: block;
 }
 .hidden {
+  display: none;
+}
+::-webkit-scrollbar {
   display: none;
 }

@@ -5,20 +5,28 @@ const navSoc = document.querySelector(".nav-bar .nav-footer .soc-links li");
 const socLinks = document.querySelectorAll(
   ".nav-bar .nav-footer .soc-links li a"
 );
-
+const informationCard = document.querySelectorAll(
+  ".information-content .information-card"
+);
+const informationImg = document.querySelectorAll(
+  ".information-contetn .information-card img"
+);
 const mainBox = document.querySelector(".main-box");
 document.addEventListener("DOMContentLoaded", function () {
   const menuBar = document.querySelector(".hidden-navbar");
   const menuToggleBtn = document.querySelector(".hidden-navbar-arrow");
   const overlay = document.querySelector(".overlay");
 
-  document.addEventListener("mousemove", (e) => {
-    if (window.innerWidth < 1200 && e.clientX <= window.innerWidth * 0.1) {
+  const checkWindowSize = () => {
+    if (window.innerWidth < 1200) {
       menuToggleBtn.classList.add("visible");
     } else if (!menuBar.classList.contains("visible")) {
       menuToggleBtn.classList.remove("visible");
     }
-  });
+  };
+  checkWindowSize();
+
+  window.addEventListener("resize", checkWindowSize);
 
   menuToggleBtn.addEventListener("click", () => {
     menuToggleBtn.style.transform = "rotate(180deg)";

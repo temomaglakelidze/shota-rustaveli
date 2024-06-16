@@ -46,3 +46,11 @@ mainBox.addEventListener("mousemove", () => {
 mainBox.addEventListener("mouseout", () => {
   cursor.classList.remove("blue-cursor");
 });
+informationCard.forEach((card) => {
+  card.addEventListener("mousemove", () => {
+    cursor.classList.add("blue-cursor");
+  });
+  card.addEventListener("mouseout", () => {
+    cursor.classList.remove("blue-cursor");
+  });
+});

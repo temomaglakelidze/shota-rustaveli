@@ -1,11 +1,20 @@
+@property --p {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
 .information-content {
-  @property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-  }
   width: 100%;
   height: 200px;
+  animation: infromation-content-animation 0.5s;
+  @keyframes infromation-content-animation {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
   .information-card {
     background-color: white;
     border-radius: 20px;
@@ -13,32 +22,100 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+      rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+      rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    h2 {
+      font-family: "Noto Sans Georgian", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+      color: black;
+    }
     img {
       width: 200px;
-      position: relative;
+      height: 100px;
+      position: absolute;
       height: 200px;
       top: 100px;
       left: 100px;
+      transition: 0.5s;
+      background: none;
     }
     .books-img,
     .typewriter {
       top: 40px;
     }
+    &:hover img {
+      scale: 1.1;
+    }
 
-    .information-numb {
-      animation: counter 5s infinite alternate ease-in-out;
-      font: 800 40px system-ui;
-      padding: 2rem;
-    }
-    div::after {
-      content: counter(num);
-    }
-    @keyframes counter {
-      from {
-        --num: 0;
+    .pie {
+      --p: 20;
+      --b: 22px;
+      --c: darkred;
+      --w: 150px;
+
+      width: var(--w);
+      aspect-ratio: 1;
+      position: relative;
+      display: inline-grid;
+      margin: 5px;
+      place-content: center;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: sans-serif;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
       }
-      to {
-        --num: 100;
+
+      &:before {
+        inset: 0;
+        background: radial-gradient(farthest-side, var(--c) 98%, #0000)
+            top/var(--b) var(--b) no-repeat,
+          conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+        mask: radial-gradient(
+          farthest-side,
+          #0000 calc(99% - var(--b)),
+          #000 calc(100% - var(--b))
+        );
+      }
+
+      &:after {
+        inset: calc(50% - var(--b) / 2);
+        background: var(--c);
+        transform: rotate(calc(var(--p) * 3.6deg))
+          translateY(calc(50% - var(--w) / 2));
+      }
+    }
+
+    .animate {
+      animation: p 1s 0.5s both;
+    }
+
+    @keyframes p {
+      from {
+        --p: 0;
+      }
+    }
+    &:active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      transition: 34ms;
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .information-content {
+    .information-card {
+      img {
+        display: none;
       }
     }
   }
