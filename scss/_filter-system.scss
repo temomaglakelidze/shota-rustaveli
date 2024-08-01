@@ -1,0 +1,12 @@
+.filter-system {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  animation: filter-animation 1s;
+}
+@keyframes filter-animation {
+  from {
+    transform: translateY(150%);
+  }
+}

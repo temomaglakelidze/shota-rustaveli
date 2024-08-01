@@ -54,3 +54,16 @@ informationCard.forEach((card) => {
     cursor.classList.remove("blue-cursor");
   });
 });
+filterSystem.addEventListener("mousemove", () => {
+  cursor.classList.add("blue-cursor");
+});
+filterSystem.addEventListener("mouseout", () => {
+  cursor.classList.remove("white-cursor");
+});
+document.addEventListener(cursor, function () {
+  cursor.style.left = 0;
+  cursor.style.top = 0;
+});
+document.addEventListener("touchend", function () {
+  cursor.style.display = "block";
+});
