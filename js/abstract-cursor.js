@@ -40,24 +40,10 @@ socLinks.forEach((link) => {
     cursor.classList.remove("blue-cursor");
   });
 });
-mainBox.addEventListener("mousemove", () => {
+abstractContent.addEventListener("mouseover", () => {
   cursor.classList.add("blue-cursor");
 });
-mainBox.addEventListener("mouseout", () => {
-  cursor.classList.remove("blue-cursor");
-});
-informationCard.forEach((card) => {
-  card.addEventListener("mousemove", () => {
-    cursor.classList.add("blue-cursor");
-  });
-  card.addEventListener("mouseout", () => {
-    cursor.classList.remove("blue-cursor");
-  });
-});
-filterSystem.addEventListener("mouseover", () => {
-  cursor.classList.add("blue-cursor");
-});
-filterSystem.addEventListener("mouseout", () => {
+abstractContent.addEventListener("mouseout", () => {
   cursor.classList.remove("blue-cursor");
 });
 document.addEventListener(cursor, function () {

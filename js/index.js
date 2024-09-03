@@ -13,7 +13,8 @@ const informationImg = document.querySelectorAll(
 );
 const abstractCard = document.querySelector(".information-card .abstract-card");
 const mainBox = document.querySelector(".main-box");
-const filterSystem = document.querySelector(".filter-system");
+const abstractContent = document.querySelector(".abstract-content");
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuBar = document.querySelector(".hidden-navbar");
   const menuToggleBtn = document.querySelector(".hidden-navbar-arrow");
